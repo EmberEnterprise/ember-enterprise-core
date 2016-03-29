@@ -1,0 +1,120 @@
+@import '../../common/mixins';
+@import 'variables';
+
+.e-button {
+  background: $button-primary-color;
+  @include shadow-2dp();
+  border: none;
+  border-radius: $button-border-radius;
+  color: $button-secondary-color;
+  position: relative;
+  margin: 0;
+  min-width: $button-min-width;
+  display: inline-block;
+  @include typo-button();
+  overflow: hidden;
+  will-change: box-shadow;
+  transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,
+  background-color 0.2s $animation-curve-default,
+  color 0.2s $animation-curve-default;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  @include material-button-size($padding-vertical, $padding-horizontal, $line-height, $height, $font-size);
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:focus:not(:active) {
+    @include focus-shadow();
+    background-color: $button-focus-color;
+  }
+
+  &:active {
+    @include shadow-4dp();
+    background-color: $button-active-color;
+  }
+
+  &.mdl-button--colored {
+    background: $button-primary-color-alt;
+    color: $button-secondary-color-alt;
+
+    &:hover {
+      background-color: $button-hover-color-alt;
+    }
+
+    &:active {
+      background-color: $button-active-color-alt;
+    }
+
+    &:focus:not(:active) {
+      background-color: $button-active-color-alt;
+    }
+  }
+}
+
+
+input.e-button[type="submit"] {
+  -webkit-appearance:none;
+}
+
+// Disabled buttons
+.e-button {
+  // Bump up specificity by using [disabled] twice.
+  &[disabled][disabled] {
+    background-color: $button-primary-color-disabled;
+    color: $button-secondary-color-disabled;
+    box-shadow: none;
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  @include material-button-variant($btn-default-color, $btn-default-bg);
+}
+.btn-primary {
+  @include material-button-variant($btn-primary-color, $btn-primary-bg);
+}
+// Success appears as green
+.btn-success {
+  @include material-button-variant($btn-success-color, $btn-success-bg);
+}
+// Info appears as blue-green
+.btn-info {
+  @include material-button-variant($btn-info-color, $btn-info-bg);
+}
+// Warning appears as orange
+.btn-warning {
+  @include material-button-variant($btn-warning-color, $btn-warning-bg);
+}
+// Danger and error appear as red
+.btn-danger {
+  @include material-button-variant($btn-danger-color, $btn-danger-bg);
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-large {
+  // line-height: ensure even-numbered height of button next to large input
+  @include material-button-size($padding-vertical, $padding-large-horizontal, $line-height-large, $height-large, $font-size-large);
+}
+
+.btn-small {
+  @include material-button-size($padding-vertical, $padding-small-horizontal, $line-height-small, $height-small, $font-size-small);
+}
+
+.btn-extra-small {
+  @include material-button-size($padding-vertical, $padding-extra-small-horizontal, $line-height-small, $height-extra-small, $font-size-extra-small);
+}
+
+

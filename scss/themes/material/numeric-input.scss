@@ -1,0 +1,148 @@
+@import 'variables';
+
+span.e-numeric-input {
+  background-image: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.e-numeric-input {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  border-width: 0;
+  vertical-align: middle;
+
+  white-space: nowrap;
+
+  border-radius: $main-border-radius;
+}
+
+.e-numeric-wrap {
+  position: relative;
+  cursor: default;
+  display: block;
+
+  border-width: 1px;
+  border-style: solid;
+
+  background-image: none;
+  background-position: 50% 50%;
+  background-color: $drop-down-background;
+  border-color: $drop-down-border-color;
+
+  border-radius: $main-border-radius;;
+  padding: 0 $numeric-wrap-right-padding 0 0;
+
+  background-repeat: repeat;
+}
+
+span.e-numeric-input {
+  &:hover:not(.disabled) {
+    border-color: $drop-down-hover-border-color;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2),0 2px 3px rgba(0,0,0,.05);
+    background-image: none;
+    background-position: 50% 50%;
+  }
+}
+
+.e-numeric-wrap input {
+  width: 100%;
+  vertical-align: top;
+
+  font-family: inherit;
+  border-width: 0;
+  outline: 0;
+
+  display: inline-block;
+  border-radius: $inner-border-radius 0 0 $inner-border-radius;
+  margin: 0;
+  height: $input-height;
+  line-height: $input-height;
+  padding: $numeric-input-top-padding 0;
+  text-indent: $input-indent;
+
+  background-color: $numeric-input-bg-color;
+  color: $numeric-input-color;
+  border-color: $numeric-input-border-color;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  &:disabled {
+    background-color: $numeric-disabled-bg-color;
+  }
+
+}
+
+.e-numeric-wrap input[type=text] {
+  font-size: 100%;
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+
+.e-select {
+  background-color: $numeric-input-bg-color;
+  border-color: $numeric-input-bg-color;
+
+  border-radius: 0 $main-border-radius $main-border-radius 0;
+
+  vertical-align: baseline;
+
+  width: $numeric-button-group-width;
+  padding: 0;
+
+  min-height: $input-height;
+  line-height: $numeric-button-group-line-height;
+  -moz-box-sizing: border-box;
+  text-align: center;
+  height: 100%;
+
+  border-style: solid;
+  border-width: 0 0 0 1px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.e-numeric-button {
+  border-radius: 0 1px 0 0;
+
+  line-height: $numeric-button-line-height;
+
+  display: block;
+  vertical-align: middle;
+  border-width: 0;
+  padding: 0;
+
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
+
+  height: 50%;
+  width: 100%;
+  background-color: $btn-default-bg;
+
+  &:active {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $active-numeric-button-border-color;
+  }
+
+  &:disabled {
+    background-color: $numeric-disabled-bg-color;
+  }
+}
+
+.e-numeric--active .e-numeric-button{
+  background-color: $numeric-input-border-color;
+}
+
+.e-numeric--active .e-numeric-wrap {
+  border-color: $drop-down-hover-border-color;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2),0 2px 3px rgba(0,0,0,.05);
+  background-image: none;
+  background-position: 50% 50%;
+}
+

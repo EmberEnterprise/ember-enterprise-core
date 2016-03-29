@@ -5,7 +5,19 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
     // Add options here
+    //outputPaths: {
+    //  app: {
+    //    css: {
+    //      'themes/bootstrap': '/scss/themes/bootstratp-theme.css',
+    //      'themes/material': '/scss/themes/material-theme.css',
+    //    }
+    //  }
+    //}
+
+
   });
+
+
 
   /*
     This build file specifies the options for the dummy test app of this

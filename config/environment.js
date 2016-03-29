@@ -2,5 +2,14 @@
 'use strict';
 
 module.exports = function(/* environment, appConfig */) {
-  return { };
+  var ENV = {
+    emberEnterprise: {
+      useCoreThemes: true,
+      defaultTheme: 'bootstrap',
+      additionalThemes: [],
+      includePaths: [],
+      useFontAwesome: true,
+    }
+  };
+  return ENV;
 };

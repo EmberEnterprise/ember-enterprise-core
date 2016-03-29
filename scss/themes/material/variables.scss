@@ -1,0 +1,191 @@
+$color-black: "0,0,0";
+$color-white: "255,255,255";
+
+// The two possible colors for overlayed text.
+$color-dark-contrast: $color-white !default;
+$color-light-contrast: $color-black !default;
+
+$palette-grey:
+  "250,250,250"
+  "245,245,245"
+  "238,238,238"
+  "224,224,224"
+  "189,189,189"
+  "158,158,158"
+  "117,117,117"
+  "97,97,97"
+  "66,66,66"
+  "33,33,33";
+
+$palette-grey-500: nth($palette-grey, 6);
+
+$palette-pink:
+  "252,228,236"
+  "248,187,208"
+  "244,143,177"
+  "240,98,146"
+  "236,64,122"
+  "233,30,99"
+  "216,27,96"
+  "194,24,91"
+  "173,20,87"
+  "136,14,79"
+  "255,128,171"
+  "255,64,129"
+  "245,0,87"
+  "197,17,98";
+
+$palette-pink-A200: nth($palette-pink, 12);
+
+$palette-indigo:
+  "232,234,246"
+  "197,202,233"
+  "159,168,218"
+  "121,134,203"
+  "92,107,192"
+  "63,81,181"
+  "57,73,171"
+  "48,63,159"
+  "40,53,147"
+  "26,35,126"
+  "140,158,255"
+  "83,109,254"
+  "61,90,254"
+  "48,79,254";
+$palette-indigo-500: nth($palette-indigo, 6);
+$palette-indigo-700: nth($palette-indigo, 8);
+
+// Use color primarily for emphasis. Choose colors that fit with
+// your brand and provide good contrast between visual components.
+$color-primary: $palette-indigo-500 !default;
+
+
+$color-primary-dark: $palette-indigo-700 !default;
+$color-accent: $palette-pink-A200 !default;
+
+// Our primary is dark, so use $color-dark-contrast for overlaid text.
+$color-primary-contrast: $color-dark-contrast !default;
+// Our accent is dark, so use $color-dark-contrast for overlaid text.
+$color-accent-contrast: $color-dark-contrast !default;
+
+
+// Default button colors.
+$button-primary-color: unquote("rgba(#{$palette-grey-500}, 0.20)") !default;
+$button-secondary-color: unquote("rgb(#{$color-black})") !default;
+$button-hover-color: $button-primary-color !default;
+$button-active-color: unquote("rgba(#{$palette-grey-500}, 0.40)") !default;
+$button-focus-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+
+// Colored button colors.
+$button-primary-color-alt: unquote("rgb(#{$color-primary})") !default;
+$button-secondary-color-alt: unquote("rgb(#{$color-primary-contrast})") !default;
+$button-hover-color-alt: unquote("rgb(#{$color-primary})") !default;
+$button-active-color-alt: unquote("rgb(#{$color-primary})") !default;
+$button-focus-color-alt: $button-focus-color !default;
+
+// Disabled button colors.
+$button-primary-color-disabled: unquote("rgba(#{$color-black}, 0.12)") !default;
+$button-secondary-color-disabled: unquote("rgba(#{$color-black}, 0.26)") !default;
+
+// Ripple color for colored raised buttons.
+$button-ripple-color-alt: unquote("rgb(#{$color-primary-contrast})") !default;
+
+// FAB colors and sizes.
+$button-fab-color-alt: unquote("rgb(#{$color-accent})") !default;
+$button-fab-hover-color-alt: unquote("rgb(#{$color-accent})") !default;
+$button-fab-active-color-alt: unquote("rgb(#{$color-accent})") !default;
+$button-fab-text-color-alt: unquote("rgb(#{$color-accent-contrast})") !default;
+$button-fab-ripple-color-alt: unquote("rgb(#{$color-accent-contrast})") !default;
+
+//Dimensions
+$button-min-width: 64px !default;
+$button-height: 36px !default;
+$button-padding: 16px !default;
+$button-margin: 4px !default;
+$button-border-radius: 2px !default;
+
+$padding-vertical: 0;
+$padding-horizontal: $button-padding;
+$line-height: $button-height;
+$height: $button-height;
+$border-radius: $button-border-radius;
+
+$padding-large-horizontal: 16px !default;
+$line-height-large: 40px !default;
+$height-large: 40px;
+
+$padding-small-horizontal: 10px !default;
+$line-height-small: 20px !default;
+$height-small: 25px;
+
+$padding-extra-small-horizontal: 5px !default;
+$height-extra-small: 20px !default;
+
+$font-size: 14px;
+$font-size-large: 18px !default;
+$font-size-small: 12px !default;
+$font-size-extra-small: 10px !default;
+
+//Animation
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
+
+$animation-curve-default: $animation-curve-fast-out-slow-in !default;
+
+
+//extra
+$brand-primary: rgb(16,108,200) !default; // #337ab7
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+
+$btn-default-color: #333 !default;
+$btn-default-bg: #fff !default;
+$btn-default-border: #ccc !default;
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $brand-primary !default;
+
+$btn-success-color: #fff !default;
+$btn-success-bg: $brand-success !default;
+
+$btn-info-color: #fff !default;
+$btn-info-bg: $brand-info !default;
+
+$btn-warning-color: #fff !default;
+$btn-warning-bg: $brand-warning !default;
+
+$btn-danger-color: #fff !default;
+$btn-danger-bg: $brand-danger !default;
+
+
+$input-height: 2.214em;
+$input-indent: .8em;
+
+
+$numeric-input-bg-color: #fff;
+$numeric-input-color: #444;
+$numeric-input-border-color: #e6e6e6;
+$numeric-disabled-bg-color: #E2E4E7;
+
+$drop-down-background: #fafafa;
+$drop-down-border-color: #f0f0f0;
+
+$main-border-radius: $border-radius;
+$inner-border-radius: $main-border-radius - 1;
+
+$hover-background: #ebebeb;
+$select-hover-background-color: saturate($hover-background, 1%);
+$drop-down-hover-border-color: #f5f5f5;
+
+$active-numeric-button-border-color: darken($drop-down-hover-border-color, 10%);
+
+$numeric-wrap-right-padding: 2.571em;
+$numeric-input-top-padding: .177em;
+
+$numeric-button-group-width: 2.571em;
+$numeric-button-group-line-height: 2.564em;
+$numeric-button-line-height: 1.357em;
+
