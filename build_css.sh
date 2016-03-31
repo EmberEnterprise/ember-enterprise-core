@@ -1,2 +1,2 @@
-scss scss/bootstrap-theme.scss:dist/bootstrap-theme.css
-scss scss/material-theme.scss:dist/material-theme.css
+scss scss/bootstrap-theme.scss:css/bootstrap-theme.css
+scss scss/material-theme.scss:css/material-theme.css
