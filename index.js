@@ -42,7 +42,7 @@ module.exports = {
 
   treeForVendor: function(tree) {
     console.log('11111111111');
-    tree = new Funnel(tree, { include: [ /dist/ ] });
+    tree = new Funnel(tree, { include: [ /css/ ] });
     return this._super.treeForAddon.call(this, tree);
   }
 };
