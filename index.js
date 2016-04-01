@@ -3,7 +3,6 @@
 var path = require('path');
 var fs = require('fs');
 var Funnel = require('broccoli-funnel');
-var log = require('broccoli-stew').log;
 
 process.setMaxListeners(0);
 
@@ -32,8 +31,11 @@ module.exports = {
   },
 
   treeForVendor: function(tree) {
-    tree = new Funnel('node_modules/ember-enterprise-core/css', { destDir: 'compiled_css' });
-    var loggedApp = log(tree, { name: 'vendor tree' });
-    return this._super.treeForVendor.call(this, loggedApp);
+    var cssPath = 'node_modules/ember-enterprise-core/css';
+    if (this.isDevelopingAddon()) {
+      cssPath = 'css';
+    }
+    tree = new Funnel(cssPath, { destDir: 'compiled_css' });
+    return this._super.treeForVendor.call(this, tree);
   }
 };
