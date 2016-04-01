@@ -1,6 +1,6 @@
 # Ember-enterprise-core
 
-This README outlines the details of collaborating on this Ember addon.
+[![Build Status](https://travis-ci.org/EmberEnterprise/ember-enterprise-core.svg?branch=master)](https://travis-ci.org/EmberEnterprise/ember-enterprise-core)
 
 ## Installation
 
